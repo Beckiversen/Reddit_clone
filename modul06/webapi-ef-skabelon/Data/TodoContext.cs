@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using Model;
+using TodoApi.Model;
 
 namespace Data
 {
     public class TodoContext : DbContext
     {
-        public DbSet<TodoTask> Tasks => Set<TodoTask>();
-        public DbSet<User> Users => Set<User>();
+        public DbSet<Question> Questions => Set<Question>();
+        public DbSet<Answer> Anwsers => Set<Answer>();
+        public DbSet<Topic> Topics => Set<Topic>();
 
         public TodoContext (DbContextOptions<TodoContext> options)
             : base(options)
@@ -18,7 +19,7 @@ namespace Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Et eksempel på at man selv kan styre hvad en tabel skal hedde.
-            modelBuilder.Entity<TodoTask>().ToTable("Tasks");
+            modelBuilder.Entity<Question>().ToTable("Spørgsmål");
         }
     }
 }

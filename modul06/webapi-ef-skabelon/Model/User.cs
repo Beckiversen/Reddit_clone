@@ -1,13 +1,15 @@
-namespace Model
+namespace TodoApi.Model
 {
     public class User
     {
-        public User(string name) {
+        public User(string name)
+        {
             this.Name = name;
         }
+
         public long UserId { get; set; }
         public string Name { get; set; }
 
-        public List<TodoTask> Tasks { get; set; }
+     
     }
 }

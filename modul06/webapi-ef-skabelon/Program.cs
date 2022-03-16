@@ -49,6 +49,7 @@ builder.Services.Configure<JsonOptions>(options =>
 // Byg app'ens objekt
 var app = builder.Build();
 
+/*
 // Seed data hvis nødvendigt
 using (var scope = app.Services.CreateScope())
 {
@@ -94,6 +95,11 @@ app.MapGet("/api/tasks/{id}", (DataService service, int id) =>
     return service.GetTaskById(id);
 });
 
+app.MapGet("/api/users/{id}", (DataService service, int id) =>
+{
+    return service.GetUsersById(id);
+});
+
 app.MapPost("/api/tasks/", (TaskData data, DataService service) =>
 {
     return service.CreateTask(data.text, data.done, data.userId);
@@ -107,10 +113,10 @@ app.MapGet("/api/users", (DataService service) =>
 app.MapPost("/api/users/", (UserData data, DataService service) =>
 {
     return service.CreateUser(data.name);
-});
+}); */
 
 app.Run();
 
 // Records til input data (svarende til input JSON)
 record TaskData(string text, bool done, int userId);
-record UserData(string name);
+record UserData(string name, int userId);

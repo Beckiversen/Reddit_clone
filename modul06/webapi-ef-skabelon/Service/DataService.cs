@@ -2,13 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 using Data;
-using Model;
+using TodoApi.Model;
 
 namespace Service;
 
 public class DataService
 {
-    private TodoContext db { get; }
+  /*  private TodoContext db { get; }
 
     public DataService(TodoContext db) {
         this.db = db;
@@ -61,7 +61,17 @@ public class DataService
         );
     }
 
-    public DbSet<User> GetUsers() {
+    public User GetUsersById(int id) {
+        var user = db
+            .Users
+            .Where(user => user.UserId == id)
+            .Include(t => t.Tasks)
+            .First();
+        return user;
+    }
+
+    public DbSet<User> GetUsers()
+    {
         return db.Users;
     }
 
@@ -71,5 +81,5 @@ public class DataService
         db.SaveChanges();
         return JsonSerializer.Serialize(
             new { msg = "New user created", newUser = user });
-    }
-}
+    } */
+} 
