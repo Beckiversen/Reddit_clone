@@ -9,6 +9,11 @@ namespace TodoApi.Model
 			this.Points = 0;
 		}
 
+		public Answer()
+        {
+
+        }
+
 		public long AnswerId { get; set; }
 
 		public string? Answers { get; set; }

@@ -7,6 +7,11 @@ namespace TodoApi.Model
             this.Name = name;
         }
 
+        public User()
+        {
+
+        }
+
         public long UserId { get; set; }
         public string Name { get; set; }
 

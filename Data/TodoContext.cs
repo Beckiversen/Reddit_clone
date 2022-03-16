@@ -6,7 +6,7 @@ namespace Data
     public class TodoContext : DbContext
     {
         public DbSet<Question> Questions => Set<Question>();
-        public DbSet<Answer> Anwsers => Set<Answer>();
+        public DbSet<Answer> Answers => Set<Answer>();
         public DbSet<Topic> Topics => Set<Topic>();
 
         public TodoContext (DbContextOptions<TodoContext> options)

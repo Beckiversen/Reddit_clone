@@ -9,6 +9,11 @@ namespace TodoApi.Model
 			this.Name = name;
 
 		}
+
+		public Topic()
+        {
+
+        }
 		public long TopicId { get; set; }
 
 		public string Name { get; set; }

@@ -11,6 +11,11 @@ namespace TodoApi.Model
             Points = 0;
         }
 
+        public Question()
+        {
+
+        }
+
         public int QuestionId { get; set; }
 
         public string Questions { get; set; }
